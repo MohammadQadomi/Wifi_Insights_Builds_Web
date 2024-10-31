@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Location-based AR.js with three.js</title>
-    <script type='module' src='bundle.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR.js User Location Tracking</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
     <style>
-        #distanceDisplay {
+        #positionDisplay {
             position: absolute;
             top: 20px;
             left: 20px;
@@ -15,10 +18,12 @@
             z-index: 1;
         }
     </style>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
-<body>
+<body style="margin: 0; overflow: hidden;">
+    <!-- Position Display -->
+    <div id="positionDisplay">Position: x=0, y=0, z=0</div>
+
+    <!-- AR.js Scene -->
     <a-scene
         embedded
         arjs="sourceType: webcam; debugUIEnabled: false;">
@@ -27,5 +32,4 @@
 
     <script src="index.js" type="module"></script>
 </body>
-
 </html>
