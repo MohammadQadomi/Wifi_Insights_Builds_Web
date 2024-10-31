@@ -26,4 +26,4 @@ document.addEventListener("DOMContentLoaded", () => {
         const redValue = 255 - greenValue;
         return `rgb(${redValue}, ${greenValue}, 0)`;
     }
-});
+}); 
